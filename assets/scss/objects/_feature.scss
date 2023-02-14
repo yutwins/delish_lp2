@@ -1,0 +1,376 @@
+@use "../foundation/global" as *;
+
+.feature {
+    padding-top: 80px;
+    padding-bottom: 79px;
+    position: relative;
+
+    @include mq("sp") {
+        padding-top: 40px;
+        padding-bottom: 22px;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 535px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(/assets/images/feature_bg.png) no-repeat center center / cover;
+        z-index: -1;
+
+        @include mq("sp") {
+            height: 590px;
+        }
+    }
+
+    &-inner {
+        max-width: 83%;
+        margin: 0 auto;
+
+        @include mq("sp") {
+            max-width: 84%;
+        }
+    }
+
+    &-nav {
+        width: 100%;
+        margin-top: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5%;
+
+        @include mq("sp") {
+            margin-top: 30px;
+            display: block;
+        }
+
+        &__item {
+            display: block;
+            width: 23.87%;
+            max-width: 210px;
+            height: 270px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba($theme03_color, .25);
+            border-radius: 4px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+
+            @include mq("sp") {
+                width: 100%;
+                max-width: 315px;
+                height: 130px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @for $i from 2 through 4 {
+                    &:nth-child(#{$i}) {
+                        margin-top: 8px;
+                    }
+                }
+
+                &:nth-child(1) {
+                    gap: 32px;
+                }
+                &:nth-child(2) {
+                    gap: 5px;
+                }
+                &:nth-child(3) {
+                    gap: 1px;
+                }
+                &:nth-child(4) {
+                    gap: 10px;
+                }
+            }
+
+            &:hover {
+                background-color: $theme01_color;
+                box-shadow: none;
+
+                .feature-nav__iconArea01 {
+
+                    &::after {
+                        background: url(/assets/images/feature_nav_icon01_stars_white.png) no-repeat center center / cover;
+                    }
+                }
+
+                .feature-nav__itemHead {
+                    color: #fff;
+                }
+                .feature-nav__itemSubHead {
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+
+            &--num {
+                color: $theme04_color;
+                font-size: 50px;
+                line-height: 1.2;
+                font-weight: bold;
+                font-family: $MS;
+                position: absolute;
+                top: -7px;
+                left: 3px;
+
+                @include mq("sp") {
+                    font-size: 36px;
+                    left: 2px;
+                    line-height: 1.6;
+                }
+            }
+        }
+
+        &__iconArea {
+            height: 55.5%;
+            position: relative;
+            z-index: 2;
+
+            @include mq("sp") {
+                height: 100%;
+            }
+        }
+        &__iconArea01 {
+
+            @include mq("sp") {
+                height: 105px;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 130px;
+                height: 62px;
+                position: absolute;
+                top: 56px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: url(/assets/images/feature_nav_icon01_stars_gray.png) no-repeat center center / cover;
+                z-index: 2;
+
+                @include mq("sp") {
+                    width: 109px;
+                    height: 52px;
+                    top: 22px;
+                }
+            }
+
+        }
+        &__icon {
+            height: auto;
+        }
+        &__icon01 {
+            width: 81px;
+            margin-top: 30px;
+
+            @include mq("sp") {
+                width: 70px;
+                margin-top: 0;
+            }
+        }
+        &__icon02 {
+            width: 152px;
+            margin-top: 37px;
+
+            @include mq("sp") {
+                width: 83px;
+                margin-top: 12px;
+            }
+        }
+        &__icon03 {
+            width: 155px;
+            margin-top: 36px;
+
+            @include mq("sp") {
+                width: 84px;
+                margin-top: 28px;
+            }
+        }
+        &__icon04 {
+            width: 168px;
+            margin-top: 30px;
+
+            @include mq("sp") {
+                width: 96px;
+            }
+        }
+
+        &__textArea {
+            width: 173px;
+        }
+        &__itemHead {
+            margin-top: 15px;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 0.03em;
+            color: $theme01_color;
+
+            @include mq("sp") {
+                margin-top: 0;
+            }
+        }
+        &__itemSubHead {
+            margin-top: 7px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+    }
+
+
+    &-items {
+        margin-top: 106px;
+
+        @include mq("sp") {
+            margin-top: 50px;
+        }
+    }
+
+    &-item {
+        width: 93.3%; // 730 / inner幅(782px)  
+        max-width: 730px;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mq("sp") {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        // &:not(:first-child) {
+        //     margin-top: 90px;
+        // }↓　上記と同義
+        @for $i from 2 through 4 {
+            &:nth-child(#{$i}) {
+                padding-top: 90px;
+
+                @include mq("sp") {
+                    padding-top: 50px;
+                }
+            }
+        }
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        &__imgArea {
+
+            @include mq("sp") {
+                text-align: center;
+            }
+        }
+        &__img {
+            height: auto;
+        }
+        &__img01 {
+           width: 226px; 
+
+           @include mq("sp") {
+            margin-top: 24px;
+            width: 194px;
+           }
+        }
+        &__img02 {
+            width: 242px;
+
+            @include mq("sp") {
+                width: 100%;
+                max-width: 315px;
+                margin-top: 20px;
+            }
+        }
+        &__img03 {
+            width: 250px;
+
+            @include mq("sp") {
+                width: 260px;
+                margin-top: 20px;
+            }
+        }
+        &__img04 {
+            width: 254px;
+
+            @include mq("sp") {
+                width: 225px;
+                margin-top: 10px;
+            }
+        }
+
+        &__textArea {
+            width: 61%;
+
+            @include mq("sp") {
+                width: 100%;
+                max-width: 320px;
+                margin: 0 auto; 
+            }
+        }
+
+        &__num {
+            font-family: $MS;
+            font-size: 36px;
+            font-weight: bold;
+            color: $theme01_color;
+            position: relative;
+
+            @include mq("sp") {
+                display: block;
+                width: 64px;
+                font-size: 32px;
+                margin: 0 auto;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                top: 50%;
+                left: 8px;
+                background-color: $theme04_color;
+                border-radius: 50%;
+                transform: translateY(-50%);
+                z-index: -1;
+
+                @include mq("sp") {
+                    width: 56px;
+                    height: 56px;
+                }
+            }
+        }
+        &__head {
+            margin-top: 28px;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            
+            @include mq("sp") {
+                margin-top: 20px;
+                font-size: 22px;
+                letter-spacing: 0.02em;
+            }
+        }
+        &__text {
+            margin-top: 30px;
+            font-size: 13px;
+            letter-spacing: 0.05em;
+
+            @include mq("sp") {
+                margin-top: 20px;
+                font-size: 14px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* ========================================================================
+Foundation - ファウンデーション
+======================================================================== */
+@use "foundation/color" as *;
+@use "foundation/reset" as *;
+@use "foundation/variables" as *;
+
+/* ========================================================================
+	Layout - レイアウト
+======================================================================== */
+@use "layout/common" as *;
+@use "layout/header" as *;
+@use "layout/footer" as *;
+@use "layout/pageHeader" as *;
+
+/* ========================================================================
+	Objects - オブジェクト
+======================================================================== */
+@use "objects/top" as *;
+@use "objects/worried" as *;
+@use "objects/feature" as *;
+@use "objects/feature" as *;
+@use "objects/effect" as *;
+@use "objects/plan" as *;
+@use "objects/flow" as *;
+@use "objects/qa" as *;
+@use "objects/contact" as *;
+@use "objects/thanks" as *;
+@use "objects/privacyPolicy" as *;

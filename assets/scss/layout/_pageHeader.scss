@@ -1,0 +1,70 @@
+@use "../foundation/global"  as *;
+
+.pageHeader {
+    width: 100%;; // お問い合わせフォーム部分の幅を引く
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: 1px solid $gray_color01;
+    background-color: #fff;
+    box-shadow: 0 3px 4px rgba(#CFCFCF, .25);
+
+    @include mq("sp") {
+        height: 60px;
+    }
+
+    &-inner {
+        width: 100%;
+        height: 100%;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mq("tab") {
+            padding: 0 25px;
+        }
+        @include mq("sp") {
+            padding: 0 20px;
+        }
+    }
+
+    &-logoArea {
+        width: 160px;
+
+        @include mq("sp") {
+            width: 148px;
+        }
+    }
+    &__logo {
+        width: 100%;
+        height: auto;
+    }
+
+    &-ul {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        padding-right: 28px;
+
+        @include mq("sp") {
+            display: none;
+        }
+    }
+
+    &__list {
+
+    }
+    &__listItem {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.8;
+        letter-spacing: 0.03em;
+
+        &:hover {
+            color: $theme01_color;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+@use "../foundation/global" as *;
+
+.privacyPolicy {
+    padding-top: 80px;
+
+    @include mq("sp") {
+        padding-top: 60px;
+    }
+
+    &-inner {
+        width: 853px;
+        max-width: 95%;
+        margin: 0 auto;
+        padding-top: 75px;
+        padding-bottom: 100px;
+
+        @include mq("sp") {
+            max-width: 90%;
+            padding-top: 30px;
+            padding-bottom: 70px;
+        }
+    }
+
+    &__title {
+        font-family: $PTS;
+        font-weight: bold;
+        font-size: 34px;
+        line-height: 1;
+        letter-spacing: 0.03em;
+        margin-top: 10px;
+
+        @include mq("sp") {
+            margin-top: 3px;
+        }
+        
+        &--furigana {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+    }
+    &__subtitle {
+        margin-top: 10px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+
+        @include mq("sp") {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+
+    &__head {
+        margin-top: 49px;
+        font-size: 15px;
+        font-weight: 500;
+
+        @include mq("sp") {
+            margin-top: 40px;
+        }
+    }
+
+    &-container {
+        margin-top: 50px;
+
+        @include mq("sp") {
+            margin-top: 40px;
+        }
+    }
+
+    &-items {
+
+    }
+
+    &-item {
+
+        @for $i from 2 through 13 {
+            &:nth-child(#{$i}) {
+                margin-top: 30px;
+            }
+        }
+
+        &__head {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0.03em;
+
+            @include mq("sp") {
+                font-size: 16px;
+            }
+        }
+
+        &__text {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+    }
+    
+    &__establishment {
+        margin-top: 50px;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,53 @@
+@use "../foundation/global" as *;
+
+.flow {
+    
+    &-inner {
+        padding-top: 70px;
+        padding-bottom: 63px;
+
+        @include mq("sp") {
+            padding-top: 50px;
+            padding-bottom: 58px;
+        }
+    }
+
+    &__subTitle {
+      max-width: 84%;
+      margin: 40px auto 0;
+      
+      @include mq("sp") {
+        margin: 30px auto 0;
+      }
+    }
+
+    &-main {
+        width: 742px;
+        max-width: 100%;
+        margin: 50px auto 0;
+
+        @include mq("sp") {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: 360px;
+            height: 207px;
+            margin-top: 40px;
+            margin-right: 20px;
+            margin-left: auto;
+            padding-bottom: 10px;
+
+            @media (max-width: 400px) {
+                margin-right: 0;
+            }
+        }
+        
+        &__img {
+            
+            @include mq("sp") {
+                width: 742px;
+                height: 100%;
+                max-width: initial;
+            }
+        }
+    }
+}

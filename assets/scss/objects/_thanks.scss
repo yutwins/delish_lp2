@@ -1,0 +1,56 @@
+@use "../foundation/global" as *;
+
+.thanks {
+    margin-top: 80px;
+    padding-top: 143px;
+    padding-bottom: 141px;
+
+    @include mq("sp") {
+        margin-top: 60px;
+    }
+    &-inner {
+        width: 742px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        @include mq("sp") {
+            max-width: 96%;
+        }
+    }
+
+    &__head {
+        font-size: 26px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__text {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+    
+    &__btn {
+        margin: 50px auto 0;
+        display: grid;
+        place-items: center;
+        width: 226px;
+        height: 50px;
+        box-shadow: 0 4px 10px rgba(#6A6A6A, .25);
+        border-radius: 50px;
+        background-color: $theme01_color;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+    &__btnText {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+}
+
