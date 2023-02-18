@@ -69,8 +69,11 @@
         line-height: 1.8;
         letter-spacing: 0.03em;
 
-        &:hover {
-            color: $theme01_color;
+        &.test {
+            
+            &:hover {
+                color: $theme01_color;
+            }
         }
     }
     

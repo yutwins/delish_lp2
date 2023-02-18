@@ -74,12 +74,42 @@ for(let i = 0; i < qaQ.length; i++) {
 }
 
 const head = document.getElementById('header');
+const headerLink = document.querySelectorAll('.header__listItem');
 
 window.addEventListener('scroll', function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop <= 100) {
-        head.classList.remove('is-color');
-    } else {
-        head.classList.add('is-color');
+    for(let i = 0; i < headerLink.length; i++) {
+        if (scrollTop <= 100) {
+            head.classList.remove('is-color');
+            headerLink[i].classList.remove('test');
+        } else {
+            head.classList.add('is-color');
+            headerLink[i].classList.add('test');
+        }
     }
 });
+
+
+// タブに対してクリックイベントを適用
+const tabs = document.querySelectorAll('.pagePlan-switch__tab');
+for (let i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('click', tabSwitch, false);
+}
+
+// タブをクリックすると実行する関数
+function tabSwitch(){
+    // タブのclassの値を変更
+    document.getElementsByClassName('is-active')[0].classList.remove('is-active');
+    this.classList.add('is-active');
+
+    // コンテンツのclassの値を変更
+    document.getElementsByClassName('is-title')[0].classList.remove('is-title');
+    document.getElementsByClassName('is-show')[0].classList.remove('is-show');
+    document.getElementsByClassName('is-icon')[0].classList.remove('is-icon');
+    
+    const arrayTabs = Array.prototype.slice.call(tabs);
+    const index = arrayTabs.indexOf(this);
+    document.getElementsByClassName('pagePlan-switch__titleArea')[index].classList.add('is-title');
+    document.getElementsByClassName('pagePlan-switch__wrap')[index].classList.add('is-show');
+    document.getElementsByClassName('pagePlan-switch__tabIconArea')[index].classList.add('is-icon');
+};

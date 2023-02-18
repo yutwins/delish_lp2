@@ -1,9 +1,60 @@
 ＜Todo＞
-・プラポページの完成✅
-・サンクスページタイトル部分の「CONTACT」という文字を追加？
+・画像の修正（SP、料金プランnav部分）
+・plan-option__itemのアイコン部分を揃える（iconAreaとかで囲って中の画像を中央に持ってくる感じが良さそう）
+・ヘッダーの白背景時のみホバーアクションを付与する
+・使用していない画像を削除しておく
+・「テキストor吹き出し全体の画質が荒くなっている」というコメント部分の解消
+
+
+
+【カスタムヘッダーに追加する箇所】
+.pagePlan-switch__tab.is-active .pagePlan-switch__tabTextNormal {
+  color: #3303F2;
+  border-bottom: 3px solid #3303F2;
+}
+.pagePlan-switch__tab.is-active .pagePlan-switch__tabTextMedia {
+  color: #6700EB;
+  border-bottom: 3px solid #6700EB;
+}
+
+.pagePlan-switch__tabIconArea.is-icon .pagePlan-switch__tabIcon--active {
+  display: block;
+}
+.pagePlan-switch__tabIconArea.is-icon .pagePlan-switch__tabIcon {
+  display: none;
+}
+
+.pagePlan-switch__titleArea.is-title {
+  display: block;
+}
+
+.pagePlan-switch__wrap::before {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  z-index: -1;
+}
+.pagePlan-switch__wrap.normal::before {
+  background-color: #3303F2;
+}
+.pagePlan-switch__wrap.media::before {
+  background-color: #6700EB;
+}
+
+.pagePlan-switch__wrapImg {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+
 
 ＜Questions＞
-
 
 
 

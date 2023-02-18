@@ -15,7 +15,7 @@
         background-color: $theme01_color;
 
         @include mq("sp") {
-            height: 995px;
+            height: 1220px;
         }
     }
 
@@ -47,6 +47,100 @@
             margin-top: 30px;
             font-size: 15px;
             white-space: nowrap;
+        }
+    }
+
+    &-nav {
+        margin-top: 70px;
+        display: flex;
+        align-items: center;
+        gap: 1.8%; //14px
+        
+        @include mq("sp") {
+            display: block;
+            padding-bottom: 50px;
+        }
+
+        &__item {
+            width: 48.78%;
+            max-width: 362px;
+            height: auto;
+            background-color: $pure_white;
+            padding-top: 140px;
+            padding-bottom: 27px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(#686868, 25);
+            text-align: center;
+            position: relative;
+
+            @include mq("sp") {
+                width: 100%;
+                max-width: 350px;
+                margin: 0 auto;
+                padding-top: 240px;
+                padding-bottom: 25px;
+
+                &:not(:first-child) {
+                    margin-top: 65px;
+                }
+            }
+        }
+        &__itemImg {
+            width: 136px;
+            height: 157px;
+            position: absolute;
+            top: -29px;
+            left: 50%;
+            transform: translateX(-50%);
+            object-fit: cover;
+
+            @include mq("sp") {
+                top: -15px;
+                width: 150px;
+                height: 230px;
+            }
+        }
+        &__itemHead {
+            font-size: 22px;
+            line-height: 32px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+        &__itemText {
+            margin-top: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        &__itemBtn {
+            display: grid;
+            place-items: center;
+            width: 180px;
+            height: 42px;
+            margin: 30px auto 0;
+            border-radius: 50px;
+            box-shadow: 0px 4px 10px rgba(106, 106, 106, 0.25);
+            transition: all 0.3s ease 0s;
+
+            &:hover {
+                box-shadow: none;
+                transform: translateY(3px);
+            }
+
+            &--text {
+                font-size: 15px;
+                font-weight: bold;
+                color: $pure_white;
+            }
+
+            &--normal {
+                background-color: $theme01_color;
+            }
+            
+            &--media {
+                background-color: $theme06_color;
+            }
         }
     }
 
@@ -140,6 +234,9 @@
         .plan-standard__color {
             color: $theme01_color;
         }
+        .plan-mediaStandard__color {
+            color: $theme06_color;
+        }
 
         &__priceArea {
             margin-top: 10px;
@@ -184,7 +281,6 @@
             font-size: 32px;
             font-weight: bold;
             line-height: 1;
-
 
             &--num {
                 margin-right: 4px;
@@ -292,7 +388,7 @@
 
         &__name {
             margin-top: 5px;
-            font-size: 13px;
+            font-size: 11px;
             font-weight: bold;
 
             @include mq("sp") {
@@ -305,7 +401,6 @@
 
     &-option {
         width: 100%;
-        margin-top: 28px;
         padding-top: 10px;
         padding-bottom: 18px;
         background-color: #fff;
@@ -328,7 +423,7 @@
             top: -14px;
             left: 50%;
             transform: translateX(-50%);
-            background: url(/assets/images/＋.png) no-repeat center center / cover;
+            background: url(../../images/plus-icon.png) no-repeat center center / cover;
 
             @include mq("sp") {
                 width: 34px;
@@ -349,7 +444,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 9.7%;
+            gap: 5.6%;
 
             @include mq("sp") {
                 display: block;
@@ -358,14 +453,14 @@
         }
 
         &__item {
-            display: flex;
-            align-items: center;
-            gap: 7px;
+            text-align: center;
 
             @include mq("sp") {
+                display: flex;
+                align-items: center;
+                gap: 13px;
                 width: 200px;
                 margin: 0 auto;
-                gap: 13px;
                 font-size: 15px;
 
                 &:not(:first-child) {

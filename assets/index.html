@@ -383,12 +383,29 @@
 
         <section class="plan">
             <div class="plan-inner inner">
-                <h2 class="section__title plan__title">選べる３つの料金プラン</h2>
+                <h2 class="section__title plan__title">選べる料金プラン</h2>
                 <p class="plan__subTitle">
-                    DELISH AGENTは<br class="sp-only">「初期費用0円」「月額定額制」の料金体系。<br>
+                    POST FORCEは<br class="sp-only">「初期費用0円」「月額定額制」の料金体系。<br>
                     投稿数によって異なる３つのプランを<br class="sp-only">ご用意しております。
                 </p>
-                <div class="plan-wrap">
+                <nav class="plan-nav">
+                    <div class="plan-nav__item">
+                        <picture>
+                            <source srcset="./images/normal-plan-img.png" media="(min-width: 768px)">
+                            <img class="plan-nav__itemImg" src="./images/normal-plan-img.png">
+                        </picture>
+                        <h3 class="plan-nav__itemHead">通常プラン</h3>
+                        <p class="plan-nav__itemText">自社商品・サービスを紹介する運用形式</p>
+                        <a href="#" class="plan-nav__itemBtn plan-nav__itemBtn--normal"><span class="plan-nav__itemBtn--text">料金を見る</span></a>
+                    </div>
+                    <div class="plan-nav__item">
+                        <img width="136" height="157" src="./images/media-plan-img.png" alt="メディアプランアイコン" class="plan-nav__itemImg">
+                        <h3 class="plan-nav__itemHead">メディアプラン</h3>
+                        <p class="plan-nav__itemText">自社商品や知識など紹介する運用形式</p>
+                        <a href="#" class="plan-nav__itemBtn plan-nav__itemBtn--media"><span class="plan-nav__itemBtn--text">料金を見る</span></a>
+                    </div>
+                </nav>
+                <!-- <div class="plan-wrap">
                     <div class="plan-items">
                         <div class="plan-item">
                             <p class="plan-item__title plan-minimum__title">ミニマム</p>
@@ -492,7 +509,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <h2 class="section__title plan__titleCenter">他社と<span class="section__title--orange">比較</span>してみると...
                 </h2>
                 <div class="plan-graphArea">

@@ -1,0 +1,211 @@
+@use "../foundation/global" as *;
+
+.pagePlan {
+
+    &-inner {
+        padding-top: 133px;
+
+        @include mq("sp") {
+            padding-top: 85px;
+        }
+     
+        &__title {
+            color: $pure_black;
+            font-size: 30px;
+
+            @include mq("sp") {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &-switch {
+        width: 100%;
+        height: auto;
+        margin-top: 36px;
+
+        @include mq("sp") {
+            margin-top: 33px;
+        }
+
+        &__tabs {
+            display: flex;
+            align-items: center;
+        }
+
+        &__tab {
+            width: 50%;
+            cursor: pointer;
+            
+            &.is-active {
+                
+                .pagePlan-switch__tabTextNormal {
+                    color: $theme01_color;
+                    border-bottom: 3px solid $theme01_color;
+                }
+                .pagePlan-switch__tabTextMedia {
+                    color: $theme06_color;
+                    border-bottom: 3px solid $theme06_color;
+                }
+            }
+        }
+
+        &__tabIconArea {
+            display: grid;
+            place-items: center;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background-color: $gray_color01;
+
+            &.is-icon {
+                background-color: #EEEFFE;
+
+                .pagePlan-switch__tabIcon--active {
+                    display: block;
+                }
+                .pagePlan-switch__tabIcon {
+                    display: none;
+                }
+            }
+
+            @include mq("sp") {
+                display: none;
+            }
+        }
+        &__tabIcon {
+            width: 35px;
+            height: 35px;
+            
+            &--active {
+                width: 35px;
+                height: 35px;
+                display: none;
+            }
+        }
+
+        &__tabText {
+            margin-top: 16px;
+            padding-bottom: 21px;
+            text-align: center;
+            font-weight: bold;
+            color: #B3B3B3;
+        }
+
+        &__titleArea {
+            margin-top: 42px;
+            text-align: center;
+            display: none;
+
+            &.is-title {
+                display: block;
+            }
+
+            @include mq("sp") {
+                margin-top: 30px;
+            }
+        }
+        &__title {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 47px;
+
+            @include mq("sp") {
+                font-size: 22px;
+            }
+        }
+        &__subtitle {
+            margin-top: 30px;
+            font-size: 15px;
+            line-height: 29px;
+            font-weight: 500;
+
+            @include mq("sp") {
+                margin-top: 20px;
+            }
+        }
+
+        &__wrap {
+            width: 100%;
+            margin-top: 157px;
+            padding-top: 185px;
+            padding-bottom: 20px;
+            position: relative;
+            display: none;
+            // box-shadow: 0 0 0 100vmax #000;
+            // clip-path: inset(0 - 100vmax);
+
+            &.is-show {
+                display: block;
+            }
+
+            @include mq("sp") {
+                margin-top: 166px;
+                padding-top: 120px;
+                padding-bottom: 30px;
+            }
+            
+            &::before {
+                content: "";
+                display: block;
+                width: 100vw;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-left: calc(50% - 50vw);
+                margin-right: calc(50% - 50vw);
+                z-index: -1;
+            }
+            
+            &.normal {
+
+                &::before {
+                    background-color: $theme01_color;
+                }
+            }
+            &.media {
+
+                &::before {
+                    background-color: $theme06_color;
+                }
+            }
+        }
+
+        &__wrapImg {
+            width: 258px;
+            height: 274px;
+            position: absolute;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include mq("sp") {
+                width: 195px;
+                height: 234px;
+                top: -136px;
+            }
+        }
+    }
+
+    &-bottom {
+        padding-top: 28px;
+        padding-bottom: 75px;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 100vw;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            z-index: -1;
+            background-color: $gray_color05;
+        }
+    }
+}

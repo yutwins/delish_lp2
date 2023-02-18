@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ①基本的metaタグ -->
+    <!-- 文字コードの指定 -->
+    <meta charset="utf-8">
+    <!-- IEで常に標準モードで表示させる -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- viewport(レスポンシブ対応) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 電話番号の自動リンク化を無効 -->
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- ②SEO対策の補助的措置 -->
+    <!-- サイトのタイトル -->
+    <title></title>
+    <!-- キーワード -->
+    <meta name="keywords" content="">
+    <!-- サイトの説明 -->
+    <meta name="description" content="">
+    <!-- 重複するURLを一本化 -->
+    <link rel="canonical" href="">
+
+    <!-- ③SNS対策 -->
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="urlが入ります">
+    <meta property="fb:app_id" content="AppID">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="Summary Card">
+    <meta name="twitter:site" content="">
+
+    <!-- ④その他の指定 -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- faviconの指定 -->
+    <link rel="shortcut icon" href="./favicon.ico">
+
+    <!-- Google fonts指定 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=PT+Sans:wght@400;700&family=Poppins:wght@400;500;600;700;800;900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- 外部のCSSファイル -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="scss/style.scss">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="main">
+        <header id="header" class="header">
+            <div class="header-inner">
+                <div class="header-logoArea">
+                    <img src="./images/logo.png" alt="ロゴ" class="header__logo">
+                </div>
+                <ul class="header-ul">
+                    <li class="header__list"><a class="header__listItem" href="#">POST FORCEとは</a></li>
+                    <li class="header__list"><a class="header__listItem" href="#">導入効果</a></li>
+                    <li class="header__list"><a class="header__listItem" href="#">料金プラン</a></li>
+                    <li class="header__list"><a class="header__listItem" href="#">運用の流れ</a></li>
+                    <li class="header__list"><a class="header__listItem" href="#">よくある質問</a></li>
+                </ul>
+            </div>
+        </header>
+        <!-- /.header -->
+
+        <div class="drawer">
+            <div class="drawer-icon">
+                <div class="drawer-icon__bars">
+                    <div class="drawer-icon__bar1"></div>
+                    <div class="drawer-icon__bar2"></div>
+                    <div class="drawer-icon__bar3"></div>
+                </div>
+            </div>
+            <!-- /.drawer-icon -->
+
+            <div class="drawer-content">
+                <div class="drawer-content__items">
+                    <a href="#" class="drawer-content__item">DELISH AGENTとは</a>
+                    <a href="#" class="drawer-content__item">導入効果</a>
+                    <a href="#" class="drawer-content__item">料金プラン</a>
+                    <a href="#" class="drawer-content__item">運用の流れ</a>
+                    <a href="#" class="drawer-content__item">よくある質問</a>
+                </div>
+                <a href="#" class="cta__btn drawer__btn"><span class="cta__btn--text">お問い合わせはこちら</span></a>
+            </div>
+            <!-- /.drawer-content -->
+        </div>
+        <!-- /.drawer -->
+
+
+        <section class="pagePlan">
+            <div class="pagePlan-inner inner">
+                <h2 class="section__title pagePlan-inner__title">選べる料金プラン</h2>
+                <!-- スイッチタブ部分 -->
+                <div class="pagePlan-switch">
+                    <ul class="pagePlan-switch__tabs">
+                        <li class="pagePlan-switch__tab pagePlan-switch__tabNormal is-active">
+                            <div class="pagePlan-switch__tabIconArea is-icon">
+                                <img src="./images/normalPlan-icon-active.png" alt="" class="pagePlan-switch__tabIcon--active">
+                                <img src="./images/normalPlan-icon.png" alt="" class="pagePlan-switch__tabIcon">
+                            </div>
+                            <p class="pagePlan-switch__tabText pagePlan-switch__tabTextNormal">通常プラン</p>
+                        </li>
+                        <li class="pagePlan-switch__tab pagePlan-switch__tabMedia">
+                            <div class="pagePlan-switch__tabIconArea">
+                                <img src="./images/mediaPlan-icon-active.png" alt="" class="pagePlan-switch__tabIcon--active">
+                                <img src="./images/mediaPlan-icon.png" alt="" class="pagePlan-switch__tabIcon">
+                            </div>
+                            <p class="pagePlan-switch__tabText pagePlan-switch__tabTextMedia">メディアプラン</p>
+                        </li>
+                    </ul>
+                    <!-- タイトルエリア-->
+                    <div class="pagePlan-switch__titleArea is-title">
+                        <h2 class="pagePlan-switch__title">通常プラン</h2>
+                        <p class="pagePlan-switch__subtitle">
+                            自社商品・サービスをメインに<br class="sp-only">紹介する運用形式。<br>
+                            ブランドに興味関心のあるユーザーを<br class="sp-only">集めることが可能です。
+                        </p>
+                    </div>
+                    <div class="pagePlan-switch__titleArea">
+                        <h2 class="pagePlan-switch__title">メディアプラン</h2>
+                        <p class="pagePlan-switch__subtitle">
+                            投稿を記事化し、自社商品や知識を<br class="sp-only">紹介する運用形式。<br>
+                            興味関心のあるユーザーを幅広く<br class="sp-only">集めることが可能です。
+                        </p>
+                    </div>
+                    <!-- タイトルエリアここまで -->
+                    <!-- 料金カード部分 -->
+                    <div class="pagePlan-switch__wrap normal is-show">
+                        <img src="./images/pgaePlan-normal-img.png" alt="" class="pagePlan-switch__wrapImg">
+                        <div class="plan-items">
+                            <div class="plan-item">
+                                <p class="plan-item__title plan-minimum__title">ミニマム</p>
+                                <div class="plan-item__priceArea">
+                                    <p class="plan-item__priceUpper">月額料金</p>
+                                    <p class="plan-item__priceText"><span class="plan-item__priceText--num">5</span>万円</p>
+                                    <p class="plan-item__priceBottom">（税抜）</p>
+                                </div>
+                                <div class="plan-item__content">
+                                    <p class="plan-item__contentHead">投稿内容</p>
+                                    <p class="plan-item__contentText">フィード<span
+                                            class="plan-item__contentText--num">10</span>本 <span class="plan-item__contentText--thin">/</span> <span
+                                            class="plan-item__contentText--small">月</span></p>
+                                </div>
+                            </div>
+                            <div class="plan-item">
+                                <p class="plan-item__title plan-right__color">ライト</p>
+                                <div class="plan-item__priceArea">
+                                    <p class="plan-item__priceUpper">月額料金</p>
+                                    <p class="plan-item__priceText plan-right__color"><span
+                                            class="plan-item__priceText--num">10</span>万円</p>
+                                    <p class="plan-item__priceBottom">（税抜）</p>
+                                </div>
+                                <div class="plan-item__content">
+                                    <p class="plan-item__contentHead">投稿内容</p>
+                                    <p class="plan-item__contentText">フィード<span
+                                            class="plan-item__contentText--num">20</span>本 <span class="plan-item__contentText--thin">/</span> <span
+                                            class="plan-item__contentText--small">月</span></p>
+                                </div>
+                            </div>
+                            <div class="plan-item">
+                                <p class="plan-standard__balloon">短期間での効果検証が可能</p>
+                                <p class="plan-item__title plan-standard__color plan-standard__title">スタンダード</p>
+                                <div class="plan-item__priceArea">
+                                    <p class="plan-item__priceUpper">月額料金</p>
+                                    <p class="plan-item__priceText plan-standard__color"><span
+                                            class="plan-item__priceText--num">15</span>万円</p>
+                                    <p class="plan-item__priceBottom">（税抜）</p>
+                                </div>
+                                <div class="plan-item__content">
+                                    <p class="plan-item__contentHead">投稿内容</p>
+                                    <p class="plan-item__contentText">フィード<span
+                                            class="plan-item__contentText--num">30</span>本 <span class="plan-item__contentText--thin">/</span> <span
+                                            class="plan-item__contentText--small">月</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-contents">
+                            <p class="plan-contents__head">基本内容</p>
+                            <div class="plan-contents__items">
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon01.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">市場調査</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon02.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">アカウント開設</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon03.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">アカウント設計</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon04.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">ハッシュタグ設定</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon05.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">サポート対応</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon06.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">レポート作成</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon07.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">定例</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagePlan-switch__wrap media">
+                        <img src="./images/pagePlan-media-img.png" alt="" class="pagePlan-switch__wrapImg">
+                        <div class="plan-items">
+                            <div class="plan-item">
+                                <p class="plan-item__title plan-minimum__title">ミニマム</p>
+                                <div class="plan-item__priceArea">
+                                    <p class="plan-item__priceUpper">月額料金</p>
+                                    <p class="plan-item__priceText"><span class="plan-item__priceText--num">10</span>万円</p>
+                                    <p class="plan-item__priceBottom">（税抜）</p>
+                                </div>
+                                <div class="plan-item__content">
+                                    <p class="plan-item__contentHead">投稿内容</p>
+                                    <p class="plan-item__contentText">フィード<span
+                                            class="plan-item__contentText--num">10</span>本 <span class="plan-item__contentText--thin">/</span> <span
+                                            class="plan-item__contentText--small">月</span></p>
+                                </div>
+                            </div>
+                            <div class="plan-item">
+                                <p class="plan-item__title plan-right__color">ライト</p>
+                                <div class="plan-item__priceArea">
+                                    <p class="plan-item__priceUpper">月額料金</p>
+                                    <p class="plan-item__priceText plan-right__color"><span
+                                            class="plan-item__priceText--num">20</span>万円</p>
+                                    <p class="plan-item__priceBottom">（税抜）</p>
+                                </div>
+                                <div class="plan-item__content">
+                                    <p class="plan-item__contentHead">投稿内容</p>
+                                    <p class="plan-item__contentText">フィード<span
+                                            class="plan-item__contentText--num">20</span>本 <span class="plan-item__contentText--thin">/</span> <span
+                                            class="plan-item__contentText--small">月</span></p>
+                                </div>
+                            </div>
+                            <div class="plan-item">
+                                <p class="plan-standard__balloon">短期間での効果検証が可能</p>
+                                <p class="plan-item__title plan-mediaStandard__color plan-standard__title">スタンダード</p>
+                                <div class="plan-item__priceArea">
+                                    <p class="plan-item__priceUpper">月額料金</p>
+                                    <p class="plan-item__priceText plan-mediaStandard__color"><span
+                                            class="plan-item__priceText--num">30</span>万円</p>
+                                    <p class="plan-item__priceBottom">（税抜）</p>
+                                </div>
+                                <div class="plan-item__content">
+                                    <p class="plan-item__contentHead">投稿内容</p>
+                                    <p class="plan-item__contentText">フィード<span
+                                            class="plan-item__contentText--num">30</span>本 <span class="plan-item__contentText--thin">/</span> <span
+                                            class="plan-item__contentText--small">月</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-contents">
+                            <p class="plan-contents__head">基本内容</p>
+                            <div class="plan-contents__items">
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon01.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">市場調査</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon02.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">アカウント開設</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon03.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">アカウント設計</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon04.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">ハッシュタグ設定</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon05.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">サポート対応</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon08.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">投稿画像制作</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon06.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">レポート作成</p>
+                                </div>
+                                <div class="plan-contents__item">
+                                    <img src="./images/plan_icon07.png" alt="アイコン" class="plan-contents__icon">
+                                    <p class="plan-contents__name">定例</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 料金カード部分ここまで -->
+                </div>
+                <!-- スイッチタブ部分ここまで -->
+                <div class="pagePlan-bottom">
+                    <div class="plan-option">
+                        <p class="plan-option__head">オプション</p>
+                        <div class="plan-option__items">
+                            <div class="plan-option__item">
+                                <img src="./images/plan_option_icon04.png" alt="アイコン" class="plan-option__icon plan-option__icon04">
+                                <p class="plan-option__text">ショップタグ設定</p>
+                            </div>
+                            <div class="plan-option__item">
+                                <img src="./images/plan_option_icon05.png" alt="アイコン" class="plan-option__icon plan-option__icon05">
+                                <p class="plan-option__text">Google Analytics設定</p>
+                            </div>
+                            <div class="plan-option__item">
+                                <img src="./images/plan_option_icon01.png" alt="アイコン" class="plan-option__icon">
+                                <p class="plan-option__text">投稿用撮影（出張）</p>
+                            </div>
+                            <div class="plan-option__item">
+                                <img src="./images/plan_option_icon02.png" alt="アイコン" class="plan-option__icon">
+                                <p class="plan-option__text">EC売上支援</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="section__title plan__titleCenter">他社と<span class="section__title--orange">比較</span>してみると...
+                    </h2>
+                    <div class="plan-graphArea">
+                        <div class="plan-graphUpper">
+                            <p class="plan-graphUpper__head">一般的な他社の料金体系</p>
+                            <ul class="plan-graphUpper__ul">
+                                <li class="plan-graphUpper__list">
+                                    <p class="plan-graphUpper__listHead">初期費用</p>
+                                    <p class="plan-graphUpper__listText"><span
+                                            class="plan-graphUpper__listText--num">20</span>万円</p>
+                                </li>
+                                <li class="plan-graphUpper__list">
+                                    <p class="plan-graphUpper__listHead">月額料金</p>
+                                    <p class="plan-graphUpper__listText"><span
+                                            class="plan-graphUpper__listText--num">20</span>万円〜</p>
+                                </li>
+                                <li class="plan-graphUpper__list">
+                                    <p class="plan-graphUpper__listHead">投稿数</p>
+                                    <p class="plan-graphUpper__listNote">※フィードのみ</p>
+                                    <p class="plan-graphUpper__listText"><span
+                                            class="plan-graphUpper__listText--num">8</span>本〜</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="plan-graphBottom">
+                            <div class="plan-graphBottom__head"><img src="./images/logo_white.png" alt="ロゴ"
+                                    class="plan-graphBottom__head--logo"></div>
+                            <ul class="plan-graphBottom__ul">
+                                <li class="plan-graphBottom__list">
+                                    <p class="plan-graphBottom__listHead">初期費用</p>
+                                    <p class="plan-graphBottom__listText"><span
+                                            class="plan-graphBottom__listText--num">0</span>円</p>
+                                </li>
+                                <li class="plan-graphBottom__list">
+                                    <p class="plan-graphBottom__listHead">月額料金</p>
+                                    <p class="plan-graphBottom__listText"><span
+                                            class="plan-graphBottom__listText--num">5</span>万円〜</p>
+                                </li>
+                                <li class="plan-graphBottom__list">
+                                    <p class="plan-graphBottom__listHead">投稿数</p>
+                                    <p class="plan-graphBottom__listNote">※フィードのみ</p>
+                                    <p class="plan-graphBottom__listText"><span
+                                            class="plan-graphBottom__listText--num">10</span>本〜</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.plan -->
+
+        <section class="flow">
+            <div class="flow-inner">
+                <h2 class="section__title flow__title">運用の流れ</h2>
+                <p class="section__subTitle flow__subTitle">DELISH AGENTではしっかり時間をかけて<br class="sp-only">運用準備をさせていただきます。<br>お申し込みからInstagram運用開始まで、<br class="sp-only">約1ヶ月程お時間をいただいております。
+                </p>
+                <div class="flow-main">
+                    <img src="./images/flow-img.png" alt="画像" class="flow-main__img">
+                </div>
+            </div>
+        </section>
+        <!-- /.flow -->
+
+        <section class="qa">
+            <div class="qa-inner">
+                <h2 class="section__title">よくある質問</h2>
+                <div class="qa-items">
+                    <div class="qa-item">
+                        <div class="qa-q">
+                            <p class="qa-q__head">Q.</p>
+                            <p class="qa-q__text">最低契約期間はありますか？</p>
+                        </div>
+                        <div class="qa-a">
+                            <p class="qa-a__head">A.</p>
+                            <p class="qa-a__text">最低６ヶ月から契約可能です。</p>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="qa-q">
+                            <p class="qa-q__head">Q.</p>
+                            <p class="qa-q__text">対応しているSNSはなんですか？</p>
+                        </div>
+                        <div class="qa-a">
+                            <p class="qa-a__head">A.</p>
+                            <p class="qa-a__text">現在は、Instagramのみ対応しております。</p>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="qa-q">
+                            <p class="qa-q__head">Q.</p>
+                            <p class="qa-q__text">決済方法の種類はなんですか？</p>
+                        </div>
+                        <div class="qa-a">
+                            <p class="qa-a__head">A.</p>
+                            <p class="qa-a__text">毎月の請求書払いとなります。</p>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="qa-q">
+                            <p class="qa-q__head">Q.</p>
+                            <p class="qa-q__text">月額料金の日割りは可能ですか？</p>
+                        </div>
+                        <div class="qa-a">
+                            <p class="qa-a__head">A.</p>
+                            <p class="qa-a__text">月額料金の日割りは対応可能です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.qa -->
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <ul class="footer-ul">
+                    <li class="footer__list"><a href="#" class="footer__listItem">プライバシーポリシー</a></li>
+                    <li class="footer__list"><a href="#" class="footer__listItem">運営会社</a></li>
+                </ul>
+                <p class="footer__copyright">Copyright &copy; 2023 DELISH AGENT All rights</p>
+            </div>
+        </footer>
+
+        <div class="cta-area">
+            <a href="#" class="cta__btn"><span class="cta__btn--text">お問い合わせはこちら</span></a>
+        </div>
+    </main>
+    <!-- /.main -->
+
+    <div class="contact">
+        <div class="contact-inner">
+            <p class="contact__head">まずはお気軽に<span class="contact__head--emphasis">ご</span><span class="contact__head--emphasis">相</span><span class="contact__head--emphasis">談</span>ください。</p>
+            <p class="contact__subHead">通常1営業日以内に担当者よりご返信いたします。</p>
+            <form action="" class="contact-form">
+                <dl class="contact-form__dl">
+                    <div class="contact-form__row">
+                        <dt class="contact-form__label">
+                            <label class="contact-form__labelText" for="your-name">会社名・店舗名</label>
+                        </dt>
+                        <dd class="contact-form__input">
+                            <input id="your-name" type="text" placeholder="DELISH株式会社">
+                        </dd>
+                    </div>
+                    <div class="contact-form__row">
+                        <dt class="contact-form__label">
+                            <label class="contact-form__labelText" for="your-furigana">ご担当者名</label>
+                        </dt>
+                        <dd class="contact-form__input">
+                            <input id="your-furigana" type="text" placeholder="山田太郎">
+                        </dd>
+                    </div>
+                    <div class="contact-form__row">
+                        <dt class="contact-form__label">
+                            <label class="contact-form__labelText" for="your-email">メールアドレス</label>
+                        </dt>
+                        <dd class="contact-form__input">
+                            <input id="your-email" type="email" placeholder="exsample@delish.co.jp">
+                        </dd>
+                    </div>
+                    <div class="contact-form__row">
+                        <dt class="contact-form__label">
+                            <label class="contact-form__labelText" for="your-email">連絡のつきやすい電話番号</label>
+                        </dt>
+                        <dd class="contact-form__input">
+                            <input id="your-email" type="number" placeholder="03-1234-5678">
+                        </dd>
+                    </div>
+                    <div class="contact-form__row">
+                        <dt class="contact-form__label">
+                            <label class="contact-form__labelText" for="your-email">会社URL</label>
+                        </dt>
+                        <dd class="contact-form__input">
+                            <input id="your-email" type="text" placeholder="https://www.delishagent.jp/">
+                        </dd>
+                    </div>
+                    <div class="contact-form__row">
+                        <dt class="contact-form__label">
+                            <label class="contact-form__labelText" for="your-message">ご質問などありましたらご記入ください
+                            <span class="require-label">任意</span>
+                            </label>
+                        </dt>
+                        <dd class="contact-form__input">
+                            <textarea name="" id="your-message" placeholder="私たちが今運用しているアカウントをそのまま運用してもらうことは可能でしょうか。"></textarea>
+                        </dd>
+                    </div>
+                </dl>
+                <div class="contact-form__row">
+                    <input id="your-agree" type="checkbox">
+                    <label class="contact-form__labelTextCheckbox" for="your-agree">プライバシーポリシーに同意する</label>
+                </div>
+                <div class="contact-form__submit">
+                    <input type="submit" value="送信する">
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <!-- /.contact -->
+
+
+    <!-- jQueryライブラリ読み込みコード -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- slick.jsライブラリ読み込みコード -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
